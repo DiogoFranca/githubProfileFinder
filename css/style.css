@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 65.2%;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #240046;
+}
+
+.container {
+  margin-top: 2rem;
+
+  width: 100%;
+  max-width: 70rem;
+}
+
+.container .title {
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.container .box-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  max-width: 48rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+
+.container .box-search .glass {
+  height: 2.5rem;
+  width: 2.5rem;
+  left: 0.5rem;
+  margin: 0 auto;
+  /* top: 0.3rem; */
+}
+
+.container .box-search input {
+  width: 91%;
+  height: 3.5rem;
+  border-radius: 1.5rem;
+  border: none;
+  outline: none;
+}
+
+.container .box-search .btn-search {
+  position: absolute;
+  right: 0.1rem;
+  padding: 0.9rem;
+  border-radius: 1rem;
+  width: 7rem;
+  background-color: #3c096c;
+  color: white;
+  border: none;
+}
+
+.result {
+  display: flex;
+  margin-top: 5rem;
+  color: white;
+  font-size: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  min-height: 27rem;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.result .avatar {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  margin-right: 3rem;
+}
+
+.result .information {
+  width: 100%;
+  word-break: break-all;
+}
+
+.result .personal-data {
+  margin-bottom: 2rem;
+}
+
+.result .personal-data .user-joined {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result .personal-data .bio {
+  margin: 5rem 0;
+  color: rgb(172, 171, 171);
+}
+
+.result .numerical-data {
+  display: flex;
+  padding: 3rem;
+  border-radius: 2rem;
+  justify-content: center;
+}
+
+.result .counter-box {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 742px) {
+  .result {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 654px) {
+  .result {
+    display: block;
+  }
+
+  .result .avatar {
+    position: absolute;
+    top: 12rem;
+  }
+
+  .result .personal-data .bio {
+    margin: 0;
+    margin-top: 20rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container .box-search .btn-search {
+    padding: 0.7rem;
+  }
+}
