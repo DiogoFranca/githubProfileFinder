@@ -52,7 +52,7 @@ As seguintes tecnologias foram usadas nesse mini projeto:
 
 <h2 id="testeaqui">Teste Aqui</h2>
 
-<a href="https://diogofranca.github.io/memory-game/">Github pages</a>
+<a href="https://diogofranca.github.io/githubProfileFinder/">Github pages</a>
 
 <br>
 
