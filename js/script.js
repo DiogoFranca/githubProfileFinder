@@ -13,38 +13,20 @@ document.addEventListener('click', e => {
   }
 })
 
-const request = obj => {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest()
-    xhr.open(obj.method, obj.url, true)
-    xhr.send()
-
-    xhr.addEventListener('load', () => {
-      if (xhr.status >= 200 && xhr.status < 300) {
-        resolve(xhr.responseText)
-      } else {
-        reject(xhr.status)
-      }
-    })
-  })
-}
-
 async function userSearch(user) {
-  const objConfig = {
-    method: 'GET',
-    url: `https://api.github.com/users/${user}`
-  }
+  const url = `https://api.github.com/users/${user}`
 
   try {
-    const profileJSON = await request(objConfig)
-    const profileOBJ = JSON.parse(profileJSON)
+    const profileOBJ = await axios(url);
+
+    if(profileOBJ.status < 200 && profileOBJ.status >= 300) {
+      throw new Error(`Usuário ${user} não encontrado, tente novamente!`)
+    }
 
     result.style.backgroundColor = '#5a189a'
-
-    addDataOnScreen(profileOBJ)
-  } catch (e) {
-    console.log(e)
-    alert(`Usuário ${user} não encontrado, tente novamente!`)
+    addDataOnScreen(profileOBJ.data)
+  } catch(e) {
+    alert(e);
   }
 }
 
